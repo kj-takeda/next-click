@@ -1,0 +1,16 @@
+
+%p 必要なエントリー数  
+="#{@inputs.last.people_number*@inputs.last.recruit_percent/10}エントリー"
+
+%p 必要なPV数
+= "#{@inputs.last.people_number*@inputs.last.recruit_percent/10/@job.conversion*100}PV"
+-pv = @inputs.last.people_number*@inputs.last.recruit_percent/10/@job.conversion*100
+
+%p PV数をクリアする為に必要な掲載期間と掲載料金
+-@plans.each do |plan|
+  =plan.name
+  -@week =pv/plan.week_pv
+  ="#{pv/plan.week_pv}週間" 
+  ="掲載料金#{@week*plan.week_price}円"
+ 
+

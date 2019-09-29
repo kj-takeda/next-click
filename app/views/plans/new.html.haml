@@ -1,0 +1,15 @@
+.input-new-entire
+  .input-new-entire__inside
+    .input-new-entire__inside__form
+      = form_for(@plan) do |f|
+
+        = f.label :name, "職種を選んで下さい" , class:"input-new-entire__inside__form__label"
+        =f.select :name,[["選択してください", "選択してください"],["Pプラン", "Pプラン"], ["PLプラン", "PLプラン"],  ["Dプラン", "Dプラン"], ["Cプラン", "Cプラン"],["Bプラン", "Bプラン"], ["Aプラン", "Aプラン"]]
+
+        = f.label :week_pv, "週間PV" , class:"input-new-entire__inside__form__label"
+        = f.text_field :week_pv , class:"input-new-entire__inside__form__text"
+
+        = f.label :week_price, "週間価格" , class:"input-new-entire__inside__form__label"
+        = f.text_field :week_price , class:"input-new-entire__inside__form__text"
+
+        = f.submit "送信する" , class:"input-new-entire__inside__form__submit"
