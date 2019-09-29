@@ -1,0 +1,10 @@
+.input-new-entire
+  .input-new-entire__inside
+   
+    .input-new-entire__inside__form
+
+      = form_tag(answer_inputs_path, method: :get) do
+        = label_tag :name , "職種選択" , class:"input-new-entire__inside__form__label"
+        = select_tag :name , options_for_select([["営業", "営業"], ["ドライバー", "ドライバー"],  ["製造", "製造"], ["事務", "事務"],["土木", "土木"], ["飲食", "飲食"], ["販売", "販売"], ["軽作業", "軽作業"]]) , :prompt => "選択してください" , name:"keyword" , class:"input-new-entire__inside__form__text"
+        = submit_tag "検索" , class:"input-new-entire__inside__form__submit"
+      

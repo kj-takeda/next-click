@@ -1,0 +1,49 @@
+.input-new-entire{
+  border:solid;
+  height:1000px;
+  width:100%;
+  background:#66CCFF;
+  &__inside{
+    border:solid;
+    height:500px;
+    width:80%;
+    margin:auto;
+    margin-top:50px;
+    background:#66CCFF;
+    &__form{
+      border:solid;
+    height:150px;
+    width:50%;
+    margin:auto;
+    margin-top:50px;
+      &__label{
+        
+        font-size:20px;
+    height:40px;
+    width:20%;
+    margin:auto;
+    text-align: center;
+    line-height: 30px;
+      }
+      &__text{
+       
+        font-size:20px;
+    height:100px;
+    width:50%;
+    margin:auto;
+    margin-top:20px;
+    border-radius: 10px;
+      }
+      &__submit{
+       
+        font-size:20px;
+    height:100px;
+    width:20%;
+    margin:auto;
+    margin-top:20px;
+    background:gainsboro;
+    border-radius: 10px;
+      }
+    }
+  }
+}
