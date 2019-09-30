@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_29_150704) do
+ActiveRecord::Schema.define(version: 2019_09_30_032127) do
 
   create_table "inputs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "people_number"
-    t.integer "recruit_percent", null: false
+    t.decimal "recruit_percent", precision: 10, scale: 2, null: false
   end
 
   create_table "jobs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

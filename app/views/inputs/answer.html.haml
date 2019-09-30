@@ -1,16 +1,34 @@
+.input-answer-entire
+  .input-answer-entire__inside
 
-%p 必要なエントリー数  
-="#{@inputs.last.people_number*@inputs.last.recruit_percent/10}エントリー"
+    .input-answer-entire__inside__entry
+      .input-answer-entire__inside__entry__p 必要なエントリー数
+      -@entry = @inputs.last.people_number/@inputs.last.recruit_percent
+      .input-answer-entire__inside__entry__number
+        =@entry.floor
 
-%p 必要なPV数
-= "#{@inputs.last.people_number*@inputs.last.recruit_percent/10/@job.conversion*100}PV"
--pv = @inputs.last.people_number*@inputs.last.recruit_percent/10/@job.conversion*100
+    .input-answer-entire__inside__pv
+      .input-answer-entire__inside__pv__p 必要なPV数
+      -@pv = @entry.floor/@job.conversion*100
+      .input-answer-entire__inside__pv__number
+        =@pv.floor
+        
 
-%p PV数をクリアする為に必要な掲載期間と掲載料金
--@plans.each do |plan|
-  =plan.name
-  -@week =pv/plan.week_pv
-  ="#{pv/plan.week_pv}週間" 
-  ="掲載料金#{@week*plan.week_price}円"
- 
+    .input-answer-entire__inside__week-price
+      %p.input-answer-entire__inside__week-price__p PV数をクリアする為に必要な掲載期間と掲載料金※以下のデータは効果を保証するものではございません
+      
+      
+      -@plans.each do |plan|
+        .input-answer-entire__inside__week-price__name
+          =plan.name
+        
+        .input-answer-entire__inside__week-price__week
+          -@week = @pv.floor/plan.week_pv
+          ="必要な掲載期間  #{@week.floor}週間"
 
+        .input-answer-entire__inside__week-price__price
+          -@price = plan.week_price*@week
+          ="掲載料金  #{plan.week_price*@week}円"
+          
+        .input-answer-entire__inside__week-price__cost
+          ="採用単価#{@price/@inputs.last.people_number}円"

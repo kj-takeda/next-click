@@ -1,0 +1,84 @@
+.input-answer-entire{
+  height:1000px;
+  width:100%;
+  background:#66CCFF;
+  &__inside{
+    width:80%;
+    height:600px;
+    margin:auto;
+   
+    background:#66CCFF;
+    &__entry{
+      height:50px;
+      width:50%;
+      
+      display:flex;
+      &__p{
+        width:50%;
+       line-height: 50px;
+       font-size:15px;
+
+      }
+      &__number{
+        width:30%;
+        line-height: 50px;
+        font-size:15px;
+       
+      }
+    }
+    &__pv{
+     
+      height:50px;
+      width:50%;
+    display:flex;
+    &__p{
+      width:50%;
+      line-height: 45px;
+      font-size:15px;
+      
+    }
+    &__number{
+      width:30%;
+        line-height: 45px;
+        font-size:15px;
+        
+    }
+
+  }
+
+
+    &__week-price{
+      border:solid;
+      
+      width:100%;
+      margin-top:20px;
+      &__p{
+        font-size:15px;
+      }
+        &__name{
+          border:solid;
+        font-size:15px;
+      }
+        &__week{
+          border:solid;
+        font-size:15px;
+        width:30%;
+        float:left;
+        display:inline-block
+      }
+        &__price{
+        font-size:15px;
+        width:30%;
+        display:inline-block;
+        border:solid;
+      }
+        &__cost{
+        font-size:15px;
+        width:30%;
+        display:inline-block;
+        border:solid;
+      }
+      
+    }
+}
+}
