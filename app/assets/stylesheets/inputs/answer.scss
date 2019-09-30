@@ -11,13 +11,13 @@
     &__entry{
       height:50px;
       width:50%;
-    
-    display:flex;
+      border:solid;
+      display:flex;
       &__p{
         width:50%;
        line-height: 50px;
        font-size:20px;
-      
+       
 
       }
       &__number{
@@ -28,7 +28,7 @@
       }
     }
     &__pv{
-      
+      border:solid;
       height:50px;
       width:50%;
     display:flex;
@@ -49,16 +49,16 @@
 
 
     &__week-price{
-      
+      border:solid;
       height:800px;
       width:100%;
       margin-top:20px;
       &__name{
-        
+        border:solid;
         font-size:30px;
       }
       &__week{
-        
+        border:solid;
         font-size:20px;
         width:30%;
         float:left;
@@ -67,8 +67,14 @@
       &__price{
         font-size:20px;
         width:30%;
-        display:inline-block
-        
+        display:inline-block;
+        border:solid;
+      }
+      &__cost{
+        font-size:20px;
+        width:30%;
+        display:inline-block;
+        border:solid;
       }
       
     }
