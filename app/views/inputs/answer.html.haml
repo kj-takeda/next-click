@@ -3,7 +3,8 @@
 
     .input-answer-entire__inside__entry
       .input-answer-entire__inside__entry__p 必要なエントリー数
-      -@entry = @inputs.last.people_number/@inputs.last.recruit_percent
+      -@recruit_percent = @inputs.last.recruit_percent/100
+      -@entry = @inputs.last.people_number/@recruit_percent
       .input-answer-entire__inside__entry__number
         =@entry.floor
 
@@ -23,8 +24,8 @@
           =plan.name
         
         .input-answer-entire__inside__week-price__week
-          -@week = @pv.floor/plan.week_pv
-          ="必要な掲載期間  #{@week.floor}週間"
+          -@week = @pv/plan.week_pv
+          ="必要な掲載期間  #{@week.round}週間"
 
         .input-answer-entire__inside__week-price__price
           -@price = plan.week_price*@week
