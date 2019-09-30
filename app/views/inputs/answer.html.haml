@@ -24,11 +24,11 @@
         
         .input-answer-entire__inside__week-price__week
           -@week = @pv.floor/plan.week_pv
-          ="#{@week.floor}週間"
+          ="必要な掲載期間  #{@week.floor}週間"
 
         .input-answer-entire__inside__week-price__price
-          ="#{plan.week_price*@week}円(税抜き)"
+          -@price = plan.week_price*@week
+          ="掲載料金  #{plan.week_price*@week}円"
           
         .input-answer-entire__inside__week-price__cost
-          ="#{plan.week_price*@week}円(税抜き)"
-
+          ="採用単価#{@price/@inputs.last.people_number}円"

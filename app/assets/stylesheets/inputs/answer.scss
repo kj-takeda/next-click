@@ -3,45 +3,44 @@
   width:100%;
   background:#66CCFF;
   &__inside{
-    height:800px;
     width:80%;
+    height:600px;
     margin:auto;
-    
+   
     background:#66CCFF;
     &__entry{
       height:50px;
       width:50%;
-      border:solid;
+      
       display:flex;
       &__p{
         width:50%;
        line-height: 50px;
-       font-size:20px;
-       
+       font-size:15px;
 
       }
       &__number{
         width:30%;
         line-height: 50px;
-        font-size:20px;
+        font-size:15px;
        
       }
     }
     &__pv{
-      border:solid;
+     
       height:50px;
       width:50%;
     display:flex;
     &__p{
       width:50%;
       line-height: 45px;
-      font-size:20px;
+      font-size:15px;
       
     }
     &__number{
       width:30%;
         line-height: 45px;
-        font-size:20px;
+        font-size:15px;
         
     }
 
@@ -50,28 +49,31 @@
 
     &__week-price{
       border:solid;
-      height:800px;
+      
       width:100%;
       margin-top:20px;
-      &__name{
-        border:solid;
-        font-size:30px;
+      &__p{
+        font-size:15px;
       }
-      &__week{
-        border:solid;
-        font-size:20px;
+        &__name{
+          border:solid;
+        font-size:15px;
+      }
+        &__week{
+          border:solid;
+        font-size:15px;
         width:30%;
         float:left;
         display:inline-block
       }
-      &__price{
-        font-size:20px;
+        &__price{
+        font-size:15px;
         width:30%;
         display:inline-block;
         border:solid;
       }
-      &__cost{
-        font-size:20px;
+        &__cost{
+        font-size:15px;
         width:30%;
         display:inline-block;
         border:solid;
