@@ -4,7 +4,7 @@
     = form_for(@input) do |f|
       .input-new-entire__inside__form
         = f.label :people_number, "採用人数" , class:"input-new-entire__inside__form__label"
-        = f.text_field :people_number , class:"input-new-entire__inside__form__text"
+        = f.text_field :people_number , class:"input-new-entire__inside__form__text",placeholder:"半角数字 1~100"
 
       .input-new-entire__inside__form
         = f.label :recruit_percent, "応募→採用率" , class:"input-new-entire__inside__form__label"
