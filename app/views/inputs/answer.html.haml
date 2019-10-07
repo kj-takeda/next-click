@@ -29,7 +29,8 @@
 
         .input-answer-entire__inside__week-price__price
           -@price = plan.week_price*@week
-          ="掲載料金  #{plan.week_price*@week}円"
+          ="掲載料金  #{@price.floor}円"
           
         .input-answer-entire__inside__week-price__cost
-          ="採用単価#{@price/@inputs.last.people_number}円"
+          -@recruit_price = @price.floor/@inputs.last.people_number
+          ="採用単価#{@recruit_price}円"
